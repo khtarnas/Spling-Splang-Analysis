@@ -24,7 +24,24 @@ mean = data[data.columns].mean() #finding the means of each column
 data = data.append(mean, ignore_index = True) #add the means to the df to maintain df integrity
 averages = data.drop(range(len(data.index) - 1), axis = 0, inplace = False) #remove unnecessary remaining rows
 
-# bar graph creation function
+# Important categories
+conjugations = ['A. "-ed"', 'B. "/æ/"', 'C. "/ʌ/"']
+initials = ['sCC', 'sC', 'CC', 'C']
+finals = ['nasal', 'k/g', 'n/m', 'C']
+
+
+
+
+
+
+
+
+
+
+'''
+Function that takes in data and title and makes a bar graph (for the three
+different conjugation types)
+'''
 def bar_graph(data, title):
 
     # Get items in each conjugation category
@@ -41,45 +58,82 @@ def bar_graph(data, title):
     # Plot that data using the following three conjugation categories:
     xAxis =  ["-ed", "/æ/", "/ʌ/"]
     plt.bar(xAxis,yAxis)
+    plt.ylim(0, 7)
     plt.title(title)
     plt.xlabel('Past Tense Conjugation')
     plt.ylabel('Average Given Score')
     plt.show()
 
-def get_category_words(data, category, section):
+
+'''
+Function that takes in category names and the section in which the category is
+applicable (e.g. 'initial_consonants) and makes a bar graph.
+'''
+def graph_cat(data, category, section):
     x = categories.loc[categories[section] == category]
     words = x['A. "-ed"'].tolist() + x['B. "/æ/"'].tolist() + x['C. "/ʌ/"'].tolist()
+    
     cat_averages = averages
-
     for col in cat_averages.columns:
         if not any(x in col for x in words):
             cat_averages = cat_averages.drop(col, axis = 1, inplace = False)
-    bar_graph(cat_averages, category)
 
-# Indiscriminate-data analysis
-bar_graph(averages, 'All words')
+    title = section + ' = ' + category
+    bar_graph(cat_averages, title)
 
-# sCC analysis
-get_category_words(data, 'sCC', 'initial_consonants')
 
-# sC analysis
-get_category_words(data, 'sC', 'initial_consonants')
+'''
+Function that displays a bar_graph of the average score given to a specific
+category under a specific conjugation type with the parameters of a conjugation
+type, the types of categories being considered and the section in which they
+are being considered.
+'''
+def from_conjugation(conjugation, types, section):
+    aves = []
+    for i in types: 
+        words = categories.loc[categories[section] == i][conjugation].tolist()
+        conj_ave = averages
+        for col in conj_ave.columns:
+            if not any(x in col for x in words):
+                conj_ave = conj_ave.drop(col, axis = 1, inplace = False)
+        aves.append(conj_ave.mean(axis=1).tolist()[0])
 
-# CC analysis
-get_category_words(data, 'CC', 'initial_consonants')
+    plt.bar(types, aves)
+    plt.ylim(0, 7)
+    plt.title(conjugation + ' ' + section)
+    plt.xlabel('Consonant Categories')
+    plt.ylabel('Average Given Score')
+    plt.show()
 
-# C analysis
-get_category_words(data, 'C', 'initial_consonants')
 
-# ŋ / ŋk (nasal) analysis
-get_category_words(data, 'nasal', 'final_consonants')
 
-# k / g analysis
-get_category_words(data, 'k/g', 'final_consonants')
 
-# n / m analysis
-get_category_words(data, 'n/m', 'final_consonants')
 
-# C (other consonant) analysis
-get_category_words(data, 'C', 'final_consonants')
+
+
+
+
+
+
+
+
+testing = False
+
+if not testing:
+    
+    # Indiscriminate-data analysis
+    bar_graph(averages, 'All words')
+
+    # Initial consonants analyses:
+    for i in initials:
+        graph_cat(data, i, 'initial_consonants')
+
+    # Final consonants analyses:
+    for i in finals:
+        graph_cat(data, i, 'final_consonants')
+    
+    # Create a comparison graph for all categories under all conjugations
+    for i in conjugations:
+        from_conjugation(i, initials, 'initial_consonants')
+        from_conjugation(i, finals, 'final_consonants')
 
