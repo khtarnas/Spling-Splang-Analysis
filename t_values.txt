@@ -1,0 +1,126 @@
+Comparing the conjugations "-ed" and "/æ/":
+
+Initial Consonant of sCC:
+t-statistic: 0.009996692923427355
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: True
+
+Initial Consonant of sC:
+t-statistic: 0.027163757050509794
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: False
+
+Initial Consonant of CC:
+t-statistic: 0.03276263411363641
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: False
+
+Initial Consonant of C:
+t-statistic: 0.026608958644901884
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: False
+
+Final Consonant of nasal:
+t-statistic: 0.0006495546783477395
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: True
+
+Final Consonant of k/g:
+t-statistic: 0.0503278396672794
+Significant with p-value of 0.05: False
+Significant with p-value of 0.01: False
+
+Final Consonant of n/m:
+t-statistic: 0.025240272399311058
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: False
+
+Final Consonant of C:
+t-statistic: 0.026954664486181605
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: False
+
+Comparing the conjugations "/æ/" and "/ʌ/":
+
+Initial Consonant of sCC:
+t-statistic: 0.0015448363025162934
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: True
+
+Initial Consonant of sC:
+t-statistic: 0.012116884477335521
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: False
+
+Initial Consonant of CC:
+t-statistic: 0.0004025049979701438
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: True
+
+Initial Consonant of C:
+t-statistic: 0.0006239361134741013
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: True
+
+Final Consonant of nasal:
+t-statistic: 0.00044663317777695255
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: True
+
+Final Consonant of k/g:
+t-statistic: 0.024832397717180873
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: False
+
+Final Consonant of n/m:
+t-statistic: 0.00954791885670696
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: True
+
+Final Consonant of C:
+t-statistic: 0.0014858170661395686
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: True
+
+Comparing the conjugations "-ed" and "/ʌ/":
+
+Initial Consonant of sCC:
+t-statistic: 0.008875674663049206
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: True
+
+Initial Consonant of sC:
+t-statistic: 0.01502721037155829
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: False
+
+Initial Consonant of CC:
+t-statistic: 0.03226872960609484
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: False
+
+Initial Consonant of C:
+t-statistic: 0.027633685043775693
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: False
+
+Final Consonant of nasal:
+t-statistic: 0.00025980384843932755
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: True
+
+Final Consonant of k/g:
+t-statistic: 0.02358105885399308
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: False
+
+Final Consonant of n/m:
+t-statistic: 0.03546706721631668
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: False
+
+Final Consonant of C:
+t-statistic: 0.025823955042657394
+Significant with p-value of 0.05: True
+Significant with p-value of 0.01: False
+
